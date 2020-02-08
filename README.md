@@ -44,6 +44,10 @@ None.
 
 5、 support cluster
 
+### 0.0.2
+
+add icon and git
+
 ## Thanks
 
 >I learn his/her code and code this redisExpoloer

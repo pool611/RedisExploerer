@@ -9,3 +9,7 @@
 3、 delete key
 
 4、 show all keys in TreeView
+
+## V 0.0.2
+
+add icon and git
