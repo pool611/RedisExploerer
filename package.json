@@ -1,0 +1,154 @@
+{
+	"name": "redisexplorer",
+	"displayName": "redisexplorer",
+	"description": "redis explorer",
+	"publisher": "Pool",
+	"author": {
+		"name": "Xuan Zheng",
+		"email": "pool611@outlook.com"
+	},
+	"icon": "media/redis.png",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.41.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": [
+			{
+			  "title": "MyRedis Configuration",
+			  "properties": {
+				"myRedis.list": {
+					"type": "string",
+					"description": "Redis Server list: name of which redis client connect to"
+				},
+				"myRedis.address": {
+				  "type": "string",
+				  "description": "Redis Server Address: Where redis client connect to"
+				},
+				"myRedis.password": {
+					"type": "string",
+					"description": "Redis Server password: password of Which redis client connect to"
+				}
+			  }
+			}
+		],
+		"commands": [
+			{
+				"command": "redisExplorer.redisServer",
+				"title": "Add new redis server address",
+				"icon":{
+					"light": "media/light/add.svg",
+					"dark": "media/dark/add.svg"
+				}
+			},
+			{
+				"command": "redisExplorer.refresh",
+				"title": "Redis Refresh",
+				"icon":{
+					"light": "media/light/refresh.svg",
+					"dark": "media/dark/refresh.svg"
+				}
+			},
+			{
+				"command": "redisExplorer.refreshKey",
+				"title": "RefreshKey",
+				"icon":{
+					"light": "media/light/refresh.svg",
+					"dark": "media/dark/refresh.svg"
+				}
+			},
+			{
+				"command": "redisExplorer.deleteKey",
+				"title": "Delete"
+			},
+			{
+				"command": "redisExplorer.addKey",
+				"title": "AddKey",
+				"icon":{
+					"light": "media/light/add.svg",
+					"dark": "media/dark/add.svg"
+				}
+			}
+		],
+		"menus": {
+			"view/title": [
+				{
+					"command": "redisExplorer.refresh",
+					"when": "view == redis-item",
+					"group": "navigation"
+				},
+				{
+					"command": "redisExplorer.redisServer",
+					"when": "view == redis-item",
+					"group": "navigation"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "redisExplorer.refreshKey",
+					"when": "view == redis-item && viewItem == redisNode",
+					"group": "inline"
+				},
+				{
+					"command": "redisExplorer.deleteKey",
+					"when": "view == redis-item && viewItem == redisNode"
+				},
+				{
+					"command": "redisExplorer.addKey",
+					"when": "view == redis-item && viewItem == redisServerNode",
+					"group": "inline"
+				}
+			]
+		},
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "redis-explorer",
+					"title": "redis Explorer",
+					"icon": "media/redis.svg"
+				}
+			]
+		},
+		"views": {
+			"redis-explorer": [
+				{
+					"id": "redis-item",
+					"name": "item",
+					"when": ""
+				}
+			]
+		}
+	},
+	"activationEvents": [
+		"onView:redis-item"
+	],
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.41.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"typescript": "^3.6.4",
+		"tslint": "^5.20.0",
+		"vscode-test": "^1.2.2"
+	},
+	"dependencies": {
+		"ioredis": "^4.14.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://https://github.com/pool611/RedisExploerer"
+	 }
+}
