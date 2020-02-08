@@ -8,7 +8,7 @@
 		"email": "pool611@outlook.com"
 	},
 	"icon": "media/redis.png",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
@@ -147,8 +147,14 @@
 	"dependencies": {
 		"ioredis": "^4.14.1"
 	},
+	"homepage": "https://github.com/pool611/RedisExploerer/blob/master/README.md",
+	"bugs": {
+		"url": "https://github.com/pool611/RedisExploerer/issues",
+		"email": "pool611@outlook.com"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://https://github.com/pool611/RedisExploerer"
-	 }
+	},
+	"license": "MIT"
 }

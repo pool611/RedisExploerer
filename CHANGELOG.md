@@ -10,6 +10,6 @@
 
 4、 show all keys in TreeView
 
-## V 0.0.2
+## V 0.0.2 - V 0.0.3
 
 add icon and git

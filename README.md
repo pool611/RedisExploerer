@@ -44,7 +44,7 @@ None.
 
 5、 support cluster
 
-### 0.0.2
+### 0.0.2 - 0.0.3
 
 add icon and git
 
