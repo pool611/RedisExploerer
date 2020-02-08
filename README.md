@@ -1,4 +1,4 @@
-# redisexplorer README
+# redisexplorer
 
 Redis Explorer show all keys in treeView. you can add key, delete key, modify key.
 
