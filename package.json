@@ -154,7 +154,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://https://github.com/pool611/RedisExploerer"
+		"url": "https://github.com/pool611/RedisExploerer"
 	},
 	"license": "MIT"
 }
