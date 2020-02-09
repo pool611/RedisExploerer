@@ -14,8 +14,8 @@
 
 * support cluster | 支持集群连接
 
-## [0.0.2 - 0.0.4]
+## [0.0.2 - 0.0.5]
 
 ### Changed
 
-* update icon, git address, readme
+* update icon, git address, readme, package.json
