@@ -161,7 +161,7 @@ export class RedisProvider implements  vscode.TreeDataProvider<Item>{
     async getChildren(element: Item | undefined): Promise<Item[]> {
         if (!element) {
             const configuration = vscode.workspace.getConfiguration();
-            if (configuration.myRedis) {
+            if (configuration.myRedis.list !== "") {
                 const listArray = configuration.myRedis.list.split(';');
                 const addressArray = configuration.myRedis.address.split(';');
                 const passwordArray = configuration.myRedis.password.split(';');

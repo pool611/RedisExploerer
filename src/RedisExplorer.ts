@@ -132,6 +132,7 @@ export class RedisExplorer {
         vscode.workspace.onDidChangeConfiguration(event => {
           this.treeDataProvider.reset();
           this.lastResource = undefined;
+          this.treeDataProvider.refresh();
         });
 
         vscode.workspace.onDidSaveTextDocument(event => {
