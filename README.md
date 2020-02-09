@@ -25,6 +25,11 @@ Add .vscode/.myRedis.redis file to .gitignore
 ![avatar](/media/readme/addAddress.gif)
 
 * add key
+
+redis address example: 127.0.0.1:6379
+
+redis cluster address example: 127.0.0.1:6379,127.0.0.1:6380,127.0.0.1:6381,127.0.0.1:6382
+
 ---
 * 添加redis key
 
@@ -66,33 +71,9 @@ Modify key: it do not modify menber, it will delete key, then add the same key w
 ---
 修改key： 该扩展无法修改例如list，hash，set，zset中的单一值，修改的操作实际是删除key，然后重新添加同名key，附带最新的值
 
-## Release Notes | 发布注意事项
-
-None.
-
----
-
-无
-
-### 0.0.1
-
-1、 add key | 添加key
-
-2、 view keys | 查看key
-
-3、 delete key | 删除key
-
-4、 show all keys in TreeView | 展示所有key
-
-5、 support cluster | 支持集群连接
-
-### 0.0.2 - 0.0.4
-
-add icon and git, update readme
-
 ## Thanks | 感谢
 
->I learn his/her code and code this redisExpoloer with cluter support
+>I learn his/her code and code this redisExpoloer with cluster support
 ---
 >我从他(她)的redis扩展中学习代码，并写了这个支持集群连接的扩展
 

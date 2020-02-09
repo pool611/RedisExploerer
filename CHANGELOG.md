@@ -1,17 +1,21 @@
 # Change Log
 
-### 0.0.1
+## [0.0.1]
 
-1、 add key | 添加key
+### Add
 
-2、 view keys | 查看key
+* add key | 添加key
 
-3、 delete key | 删除key
+* view keys | 查看key
 
-4、 show all keys in TreeView | 展示所有key
+* delete key | 删除key
 
-5、 support cluster | 支持集群连接
+* show all keys in TreeView | 展示所有key
 
-### 0.0.2 - 0.0.4
+* support cluster | 支持集群连接
 
-add icon and git, update readme
+## [0.0.2 - 0.0.4]
+
+### Changed
+
+* update icon, git address, readme
