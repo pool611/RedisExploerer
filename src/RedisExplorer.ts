@@ -96,6 +96,21 @@ export class RedisExplorer {
             }
         });
 
+        vscode.commands.registerCommand("redisExplorer.command",async (element: Item) => {
+          if (element) {
+            const command = await vscode.window.showInputBox({
+              prompt: "Input a redis command "
+            });
+
+            if (command === "" || command === undefined) {
+              return;
+            }
+
+            this.treeDataProvider.execCommand(element,command);
+            this.treeDataProvider.refresh();
+          }
+      });
+
         vscode.commands.registerCommand("redisExplorer.addKey",async (element: Item) => {
             const key = await vscode.window.showInputBox({
               prompt: "Provide a new key "

@@ -33,6 +33,10 @@ redis cluster address example: 127.0.0.1:6379,127.0.0.1:6380,127.0.0.1:6381,127.
 ---
 * 添加redis key
 
+redis地址示例: 127.0.0.1:6379
+
+redis集群地址示例: 127.0.0.1:6379,127.0.0.1:6380,127.0.0.1:6381,127.0.0.1:6382
+
 ![avatar](/media/readme/addKey.gif)
 
 * modify key and delete key
@@ -40,6 +44,12 @@ redis cluster address example: 127.0.0.1:6379,127.0.0.1:6380,127.0.0.1:6381,127.
 * 修改key 删除key
 
 ![avatar](/media/readme/modifyKeyAndDeleteKey.gif)
+
+* exec redis command
+---
+* 执行redis命令
+
+![avatar](/media/readme/execCommand.gif)
 
 ## Requirements | 必要条件
 

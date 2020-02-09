@@ -8,7 +8,7 @@
 		"email": "pool611@outlook.com"
 	},
 	"icon": "media/redis.png",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
@@ -72,6 +72,14 @@
 					"light": "media/light/add.svg",
 					"dark": "media/dark/add.svg"
 				}
+			},
+			{
+				"command": "redisExplorer.command",
+				"title": "Exec redis command",
+				"icon":{
+					"light": "media/light/command.svg",
+					"dark": "media/dark/command.svg"
+				}
 			}
 		],
 		"menus": {
@@ -99,6 +107,11 @@
 				},
 				{
 					"command": "redisExplorer.addKey",
+					"when": "view == redis-item && viewItem == redisServerNode",
+					"group": "inline"
+				},
+				{
+					"command": "redisExplorer.command",
 					"when": "view == redis-item && viewItem == redisServerNode",
 					"group": "inline"
 				}

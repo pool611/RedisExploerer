@@ -19,3 +19,9 @@
 ### Changed
 
 * update icon, git address, readme, package.json
+
+## [0.0.6]
+
+### Add
+
+* support redis command exec

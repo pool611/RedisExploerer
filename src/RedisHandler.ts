@@ -132,7 +132,23 @@ export class RedisHandler {
         this.allKeys = element;
     }
 
+    public execCommand(command: string) {
+        if(!this.isConnected) {
+            Promise.reject();
+        }
+
+        this.redisClient.send_command(command.split(" ").slice(0,1).toString(),command.split(" ").slice(1)).then((result: any) => {
+            console.log(result);
+        }).catch((error: any) => {
+            vscode.window.showErrorMessage(`exec redis command error😢:${error}`);
+        });
+    }
+
     private async scanKeys(node: any): Promise<string[]> {
+        if(!this.isConnected) {
+            Promise.reject();
+        }
+
         return new Promise<string[]>((resolve, reject) => {
             let stream = node.scanStream({ count: 10000 });
             let itemList: any[] = [];
