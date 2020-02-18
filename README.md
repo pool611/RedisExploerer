@@ -18,6 +18,12 @@ Add .vscode/.myRedis.redis file to .gitignore
 
 ## Usage | 用例
 
+* if you find the icon out, the extension is now active !
+---
+* 如果你找到了这个图标，说明这个扩展已经激活了
+
+![avatar](/media/readme/whereisicon.png)
+
 * add redis address, port, and password(if need)
 ---
 * 添加redis地址，端口，密码（如果redis需要密码）

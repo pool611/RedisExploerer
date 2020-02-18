@@ -1,6 +1,6 @@
 {
 	"name": "redisexplorer",
-	"displayName": "redisexplorer",
+	"displayName": "redis explorer",
 	"description": "redis explorer",
 	"publisher": "Pool",
 	"author": {
@@ -8,7 +8,7 @@
 		"email": "pool611@outlook.com"
 	},
 	"icon": "media/redis.png",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
@@ -66,6 +66,10 @@
 				"title": "Delete"
 			},
 			{
+				"command": "redisExplorer.copyKeyName",
+				"title": "CopyKeyName"
+			},
+			{
 				"command": "redisExplorer.addKey",
 				"title": "AddKey",
 				"icon":{
@@ -103,6 +107,10 @@
 				},
 				{
 					"command": "redisExplorer.deleteKey",
+					"when": "view == redis-item && viewItem == redisNode"
+				},
+				{
+					"command": "redisExplorer.copyKeyName",
 					"when": "view == redis-item && viewItem == redisNode"
 				},
 				{

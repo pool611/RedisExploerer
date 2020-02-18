@@ -16,7 +16,8 @@ export function activate(context: vscode.ExtensionContext) {
 	// The commandId parameter must match the command field in package.json
 	context.subscriptions.push(vscode.commands.registerCommand("redisExplorer.redisServer", async () => {
 		const name = await vscode.window.showInputBox({
-		  prompt: "input your redis name which you like please😊"
+		  prompt: "input your redis name which you like please😊",
+		  ignoreFocusOut: true
 		});
   
 		if (name === ""|| name === undefined) {
@@ -27,7 +28,8 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 
 		const address = await vscode.window.showInputBox({
-			prompt: "input your redis address please😊"
+			prompt: "input your redis address please😊",
+			ignoreFocusOut: true
 		});
 
 		if (address === "" || address === undefined) {
@@ -38,7 +40,8 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 
 		const password = await vscode.window.showInputBox({
-		  prompt: "input your redis password(if need)😂"
+		  prompt: "input your redis password(if need)😂",
+		  ignoreFocusOut: true
 		});
 
 		if (password === undefined) {

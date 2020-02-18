@@ -25,3 +25,17 @@
 ### Add
 
 * support redis command exec
+
+## [0.0.7]
+
+### Changed
+
+* after exec redis command, it will show information of result
+
+### Fixed
+
+* when you lose focus on input box of redis address, the input box does not disappear
+
+### Add
+
+* right click key, you can copy key's name to clipboard

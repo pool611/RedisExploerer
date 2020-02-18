@@ -96,6 +96,13 @@ export class RedisExplorer {
             }
         });
 
+        vscode.commands.registerCommand("redisExplorer.copyKeyName",(element: Item) => {
+            if (element) {
+              vscode.env.clipboard.writeText(element.key);
+              vscode.window.showInformationMessage("key name is added to clipboard😘");
+            }
+        });
+
         vscode.commands.registerCommand("redisExplorer.command",async (element: Item) => {
           if (element) {
             const command = await vscode.window.showInputBox({
@@ -106,7 +113,11 @@ export class RedisExplorer {
               return;
             }
 
-            this.treeDataProvider.execCommand(element,command);
+            this.treeDataProvider.execCommand(element,command).then(result => {
+              vscode.window.showInformationMessage(`command result: ${result}`);
+            }).catch(error => {
+              vscode.window.showErrorMessage(`exec redis command error😢:${error}`);
+            });
             this.treeDataProvider.refresh();
           }
       });

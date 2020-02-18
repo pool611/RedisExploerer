@@ -80,8 +80,14 @@ export class RedisProvider implements  vscode.TreeDataProvider<Item>{
         }
     }
 
-    public execCommand(item: Item, command: string) {
-        this.redisHandler.get(item.redisServer.name)?.execCommand(command);
+    public execCommand(item: Item, command: string): Promise<any> {
+        return new Promise<string[]>((resolve, reject) => {
+            this.redisHandler.get(item.redisServer.name)?.execCommand(command).then(result => {
+                resolve(result);
+            }).catch(error => {
+                reject(error);
+            });
+        });
     }
 
     public deleteRedis(item: Item) {

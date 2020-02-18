@@ -132,15 +132,17 @@ export class RedisHandler {
         this.allKeys = element;
     }
 
-    public execCommand(command: string) {
+    public execCommand(command: string): Promise<string[]> {
         if(!this.isConnected) {
             Promise.reject();
         }
 
-        this.redisClient.send_command(command.split(" ").slice(0,1).toString(),command.split(" ").slice(1)).then((result: any) => {
-            console.log(result);
-        }).catch((error: any) => {
-            vscode.window.showErrorMessage(`exec redis command error😢:${error}`);
+        return new Promise<string[]>((resolve, reject) => {
+            this.redisClient.send_command(command.split(" ").slice(0,1).toString(),command.split(" ").slice(1)).then((result: any) => {
+                resolve(result);
+           }).catch((error: any) => {
+                reject(error);
+           });
         });
     }
 
