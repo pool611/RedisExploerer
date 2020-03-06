@@ -177,7 +177,7 @@ export class RedisProvider implements  vscode.TreeDataProvider<Item>{
                 const passwordArray = configuration.myRedis.password.split(';');
                 let itemArray: Item[] = [];
                 for(let i=0; i < listArray.length; i++) {
-                    itemArray.push({name:listArray[i] ,key: listArray[i],value: "", redisServer: {name: listArray[i],address: addressArray[i], password: passwordArray[0]} ,type: ItemType.Server});
+                    itemArray.push({name:listArray[i] ,key: listArray[i],value: "", redisServer: {name: listArray[i],address: addressArray[i], password: passwordArray[i]} ,type: ItemType.Server});
                 }
                 return itemArray;
             }else {

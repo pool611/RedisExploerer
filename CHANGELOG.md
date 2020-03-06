@@ -39,3 +39,9 @@
 ### Add
 
 * right click key, you can copy key's name to clipboard
+
+## [0.0.8]
+
+### Fixed
+
+* when you connect many redis addresses (need password), only the first redis could be active, it's bug 
