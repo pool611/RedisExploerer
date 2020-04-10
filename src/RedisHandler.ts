@@ -75,7 +75,7 @@ export class RedisHandler {
                 reject();
             }
 
-            this.redisClient.on("connect", () => {
+            this.redisClient.on("ready", () => {
                 console.log("Redis Connected");
                 resolve();
             });
