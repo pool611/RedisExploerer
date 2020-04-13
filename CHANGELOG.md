@@ -45,3 +45,9 @@
 ### Fixed
 
 * when you connect many redis addresses (need password), only the first redis could be active, it's bug 
+
+## [0.0.9]
+
+### Fixed
+
+* change redis status listener from "connect" to "ready", then you can see the real redis status
